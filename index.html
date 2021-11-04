@@ -27,56 +27,60 @@
             <!--<div><img class="img-fluid onlyimage" src="img/cubes.jpg" alt=""></div>-->
             <div class="row text-center" style="margin: auto; padding: auto;">
                 <div class="col-md" style="padding-bottom: 30px; padding-left: 10%;">
-                    <h1>Hráč 1</h1>
+                    <h1 id="h1hrac1">Hráč 1</h1>
                     <div class="row">
                         <figure class="ml-auto" style="margin-right: 20px; border: black 3px solid;">
-                            <img src="img/kostka2.png" alt="">
+                            <img id="img11" src="img/kostka1.png" alt="">
                         </figure>
                         <figure class="mr-auto" style="margin-left: 20px; border: black 3px solid;">
-                            <img src="img/kostka1.png" alt="">
+                            <img id="img12" src="img/kostka1.png" alt="">
                         </figure>
                     </div>
-                    <div><button>Házet</button></div>
                 </div>
                 <div class="col-md" style="padding-bottom: 30px; padding-right: 10%;">
-                    <h1>Hráč 2</h1>
+                    <h1 id="h1hrac2">Hráč 2</h1>
                     <div class="row">
                         <figure class="ml-auto" style="margin-right: 20px; border: black 3px solid;">
-                            <img src="img/kostka2.png" alt="">
+                            <img id="img21" src="img/kostka1.png" alt="">
                         </figure>
                         <figure class="mr-auto" style="margin-left: 20px; border: black 3px solid;">
-                            <img src="img/kostka1.png" alt="">
+                            <img id="img22" src="img/kostka1.png" alt="">
                         </figure>
                     </div>
-                    <div><button>Házet</button></div>
                 </div>
+            </div>
+            <div class="text-center"><button id="batn">Hází hráč 1</button>
+                <p id="win"></p>
             </div>
             <div class="text-center" style="font-size: 25px; margin-top: 4%; ">
                 <div class="row ">
-                    <div class="col-md ">
-                        <p>Hráč 1</p>
-                        <p>Body: </p>
+                    <div class="col-md">
+                        <p id="statshrac1">Hráč 1</p>
+                        <p>Body:
+                            <p id="body1">0</p>
+                        </p>
                     </div>
                     <div class="col-md ">
                         <p>Kolo:
-                            <p>0</p>
+                            <p id="kolo">0</p>
                         </p>
-                        <p></p>
                     </div>
                     <div class="col-md ">
-                        <p>Hráč 2</p>
-                        <p>Body: </p>
+                        <p id="statshrac2">Hráč 2</p>
+                        <p>Body:
+                            <p id="body2">0</p>
+                        </p>
                     </div>
                 </div>
             </div>
             <div class="text-center " style="margin-top: 4%; margin-bottom: 3%; ">
-                <button>Menu</button>
+                <button id="dvahraci" style="margin-right: 20px; border: black 3px solid;">2 hráči</button><button id="AI" style="margin-left: 20px; border: black 3px solid;">AI</button>
             </div>
         </div>
     </main>
     <footer class="backgroundcolor ">
         <div class="text-center fixed-bottom " style="font-size: 25px; ">
-            &copy; Ryba Jiří
+            &copy; Jiří Ryba
         </div>
     </footer>
 
