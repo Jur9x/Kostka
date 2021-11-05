@@ -141,12 +141,12 @@ function hrac2() {
     imgdvajedna.src = `img/kostka${one}.png`;
     two = Math.ceil(Math.random() * 6);
     imgdvadva.src = `img/kostka${two}.png`;
-    body1 += one;
-    body1 += two;
+    body2 += one;
+    body2 += two;
     if (one == two) {
-        body1 += one * 3;
-        body1plus = "+" + (one * 3 + one + two);
-    } else { body1plus = "+" + (one + two) };
+        body2 += one * 3;
+        body2plus = "+" + (one * 3 + one + two);
+    } else { body2plus = "+" + (one + two) };
 }
 
 function aicko() {
