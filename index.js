@@ -28,57 +28,51 @@ let kolocislorealna = 0;
 let hrac1p = 1;
 let hrac2p = 0;
 
-AI.addEventListener('click', function() {
+function prikazy() {
     body1 = 0;
     body2 = 0;
     body1plus = 0;
     body2plus = 0;
     kolocislo = 0;
-    hraci = 0;
-    hrac1p = 1;
-    hrac2p = 0;
     kolocislorealna = 0;
+    imgjednajedna.src = `img/kostka1.png`;
+    imgjednadva.src = `img/kostka1.png`;
+    imgdvajedna.src = `img/kostka1.png`;
+    imgdvadva.src = `img/kostka1.png`;
+    kolo.innerHTML = (kolocislo);
+    bodyjedna.innerHTML = (body1);
+    bodydva.innerHTML = (body2);
+    bodyjednaplus.innerHTML = (body1plus);
+    bodydvaplus.innerHTML = (body2plus);
+}
+
+AI.addEventListener('click', function() {
+    prikazy();
     statshracjedna.innerHTML = ("Hráč");
     statshracdva.innerHTML = ('AIčko');
     hjednahracjedna.innerHTML = ('Hráč');
     hjednahracdva.innerHTML = ('AIčko');
     batn.innerHTML = ('Hází hráč');
-    imgjednajedna.src = `img/kostka1.png`;
-    imgjednadva.src = `img/kostka1.png`;
-    imgdvajedna.src = `img/kostka1.png`;
-    imgdvadva.src = `img/kostka1.png`;
-    kolo.innerHTML = (kolocislo);
-    bodyjedna.innerHTML = (body1);
-    bodyjednaplus.innerHTML = (body1plus);
-    bodydva.innerHTML = (body2);
-    bodydvaplus.innerHTML = (body2plus);
+    hraci = 0;
+    hrac1p = 1;
+    hrac2p = 0;
+    winid.innerHTML = ('');
 });
 
 dvahraci.addEventListener('click', function() {
-    body1 = 0;
-    body2 = 0;
-    body1plus = 0;
-    body2plus = 0;
-    kolocislo = 0;
-    hraci = 1;
-    hrac1p = 1;
-    hrac2p = 0;
-    kolocislorealna = 0;
+    prikazy();
     statshracjedna.innerHTML = ("Hráč 1");
     statshracdva.innerHTML = ('Hráč 2');
     hjednahracjedna.innerHTML = ('Hráč 1');
     hjednahracdva.innerHTML = ('Hráč 2');
     batn.innerHTML = ('Hází hráč 1');
-    imgjednajedna.src = `img/kostka1.png`;
-    imgjednadva.src = `img/kostka1.png`;
-    imgdvajedna.src = `img/kostka1.png`;
-    imgdvadva.src = `img/kostka1.png`;
-    kolo.innerHTML = (kolocislo);
-    bodyjedna.innerHTML = (body1);
-    bodyjednaplus.innerHTML = (body1plus);
-    bodydva.innerHTML = (body2);
-    bodydvaplus.innerHTML = (body2plus);
+    hraci = 1;
+    hrac1p = 1;
+    hrac2p = 0;
+    winid.innerHTML = ('');
 });
+
+
 
 batn.addEventListener('click', function() {
     if (hraci == 1) {
@@ -180,52 +174,22 @@ function win() {
 
 function reset() {
     if (hraci == 1) {
-        body1 = 0;
-        body2 = 0;
-        body1plus = 0;
-        body2plus = 0;
-        kolocislo = 0;
-        hraci = 1;
+        prikazy();
         hrac1p = 1;
         hrac2p = 0;
-        kolocislorealna = 0;
-        statshracjedna.innerHTML = ("Hráč");
-        statshracdva.innerHTML = ('AIčko');
-        hjednahracjedna.innerHTML = ('Hráč');
-        hjednahracdva.innerHTML = ('AIčko');
-        batn.innerHTML = ('Hází hráč');
-        imgjednajedna.src = `img/kostka1.png`;
-        imgjednadva.src = `img/kostka1.png`;
-        imgdvajedna.src = `img/kostka1.png`;
-        imgdvadva.src = `img/kostka1.png`;
-        kolo.innerHTML = (kolocislo);
-        bodyjedna.innerHTML = (body1);
-        bodydva.innerHTML = (body2);
-        bodyjednaplus.innerHTML = (body1plus);
-        bodydvaplus.innerHTML = (body2plus);
+        statshracjedna.innerHTML = ("Hráč 1");
+        statshracdva.innerHTML = ('Hráč 2');
+        hjednahracjedna.innerHTML = ('Hráč 1');
+        hjednahracdva.innerHTML = ('Hráč 2');
+        batn.innerHTML = ('Hází hráč 1');
     } else {
-        body1 = 0;
-        body2 = 0;
-        body1plus = 0;
-        body2plus = 0;
-        kolocislo = 0;
-        hraci = 0;
-        hrac1p = 1;
-        hrac2p = 0;
-        kolocislorealna = 0;
+        prikazy();
         statshracjedna.innerHTML = ("Hráč");
         statshracdva.innerHTML = ('AIčko');
         hjednahracjedna.innerHTML = ('Hráč');
         hjednahracdva.innerHTML = ('AIčko');
         batn.innerHTML = ('Hází hráč');
-        imgjednajedna.src = `img/kostka1.png`;
-        imgjednadva.src = `img/kostka1.png`;
-        imgdvajedna.src = `img/kostka1.png`;
-        imgdvadva.src = `img/kostka1.png`;
-        kolo.innerHTML = (kolocislo);
-        bodyjedna.innerHTML = (body1);
-        bodydva.innerHTML = (body2);
-        bodyjednaplus.innerHTML = (body1plus);
-        bodydvaplus.innerHTML = (body2plus);
+        hrac1p = 1;
+        hrac2p = 0;
     }
 }
